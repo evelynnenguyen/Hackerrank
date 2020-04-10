@@ -12,34 +12,23 @@ def minimumBribes(q):
     count = 0
     flag = True
     for i in range(n):
-        # print('i', i)
+        print('i', i)
         if q[i] > (i+1):
-            # print('q[i]', q[i])
-            # print('i+1', i+1)
+            print('q[i]', q[i])
+            print('i+1', i+1)
             if q[i] == (i+2):
                 count += 1
-                # print('count if-1', count)
+                print('count if-1', count)
                 continue
             elif q[i] == (i+3):
                 count += 2
-                # print('count elif-1', count)
+                print('count elif-1', count)
                 continue
             else:
                 flag = False
-
-        # elif q[i] < (i+1):
-        #     print('q[i]', q[i])
-        #     print('i+1', i+1)
-        #     if q[i] == i:
-        #         count += 1
-        #         print('count if-2', count)
-        #         continue
-        #     elif q[i] == (i-1):
-        #         count += 1
-        #         print('count elif-2', count)
-        #         continue
-        else:
-            continue
+        if q[i] < (i+1):
+            if q[i] != i and q[i] != (i-1):
+                count += 1
 
     if flag == True:
         print(count)
