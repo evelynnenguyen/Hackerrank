@@ -11,6 +11,8 @@ from collections import Counter
 def checkMagazine(magazine, note):
     mapM = Counter(magazine)
     mapN = Counter(note)
+    print(mapM)
+    print(mapN)
     a = mapN - mapM
     if a == {}:
         print("Yes")
@@ -29,5 +31,6 @@ if __name__ == '__main__':
         magazine = input().rstrip().split()
 
         note = input().rstrip().split()
-
+        print(magazine)
+        print(note)
         checkMagazine(magazine, note)
