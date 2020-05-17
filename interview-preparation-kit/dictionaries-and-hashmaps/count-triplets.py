@@ -7,21 +7,21 @@ import re
 import sys
 
 # Complete the countTriplets function below.
-def countTriplets(arr, r):
+def countTriplets(arr, r, n):
+    t = 0
+    r = float(r)
+    return t
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    k = int(input())
+    for i in range(k):
+        nr = input().rstrip().split()
 
-    nr = input().rstrip().split()
-
-    n = int(nr[0])
-
-    r = int(nr[1])
-
-    arr = list(map(int, input().rstrip().split()))
-
-    ans = countTriplets(arr, r)
-
-    fptr.write(str(ans) + '\n')
-
-    fptr.close()
+        n = int(nr[0])
+        # print('n', n)
+        r = int(nr[1])
+        # print('r', r)
+        arr = list(map(int, input().rstrip().split()))
+        print('arr', arr)
+        ans = countTriplets(arr, r, n)
+        print(ans)
